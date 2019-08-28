@@ -1,8 +1,8 @@
 import pygame
 
-import earthui
-import timeui
-import weatherui
+from earthui import EarthUI
+from timeui import TimeUI
+from weatherui import WeatherUI
 
 class Dashboard:
     def __init__(self, dashboardWidth, dashboardHeight):
@@ -13,11 +13,11 @@ class Dashboard:
         self.m_TimePart = TimeUI(self.ComputeQuarterUISurface(), self.ComputeQuarterUIPosition(1))
         self.m_WeatherPart = WeatherUI(self.ComputeQuarterUISurface(), self.ComputeQuarterUIPosition(2))
 
-    def ComputeQuarterUISurface():
-        return (m_Width / 2, m_Height /2)
+    def ComputeQuarterUISurface(self):
+        return (self.m_Width / 2, self.m_Height /2)
     
-    def ComputeHalfVertUISurface():
-        return (m_Width / 2, m_Height)
+    def ComputeHalfVertUISurface(self):
+        return (self.m_Width / 2, self.m_Height)
 
 #the positionTag is 0 for the left half and 1 for the right one
 #  -------------------------------
@@ -29,8 +29,8 @@ class Dashboard:
 #  |              |              |
 #  |              |              |
 #  -------------------------------
-    def ComputeHalfUIPosition(positionTag):
-        return((2*positionTag + 1)*m_Width/4, m_Height/2)
+    def ComputeHalfUIPosition(self, positionTag):
+        return((2*positionTag + 1)*self.m_Width/4, self.m_Height/2)
 
 #the positionTag is 0 for the top left quarter and then on clockwise
 #  -------------------------------
@@ -42,13 +42,13 @@ class Dashboard:
 #  |      3       |      2       |
 #  |              |              |
 #  -------------------------------
-    def ComputeQuarterUIPosition(positionTag):
+    def ComputeQuarterUIPosition(self, positionTag):
         if(positionTag == 0):
-            return(m_Width/4, m_Height/4)
+            return(self.m_Width/4, self.m_Height/4)
         elif(positionTag == 1):
-            return(3 * m_Width/4, m_Height/4)
+            return(3 * self.m_Width/4, self.m_Height/4)
         elif(positionTag == 2):
-            return(3 * m_Width/4, 3 * m_Height/4)
+            return(3 * self.m_Width/4, 3 * self.m_Height/4)
         else:
-            return(m_Width/4, 3 * m_Height/4)
+            return(self.m_Width/4, 3 * self.m_Height/4)
     

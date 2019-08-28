@@ -1,6 +1,6 @@
 import pygame
 
-import dashboard
+from dashboard import Dashboard
 
 pygame.init()
 
@@ -13,7 +13,7 @@ pygame.display.set_caption('A bit Racey')
 
 clock = pygame.time.Clock()
 
-dashboard(SCREEN_WIDTH, SCREEN_HEIGHT)
+dashboard = Dashboard(SCREEN_WIDTH, SCREEN_HEIGHT)
 
 exited = False
 
