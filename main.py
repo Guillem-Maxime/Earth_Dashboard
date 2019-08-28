@@ -13,7 +13,7 @@ pygame.display.set_caption('A bit Racey')
 
 clock = pygame.time.Clock()
 
-dashboard = Dashboard(SCREEN_WIDTH, SCREEN_HEIGHT)
+dashboard = Dashboard(SCREEN_WIDTH, SCREEN_HEIGHT, gameDisplay)
 
 exited = False
 
@@ -23,5 +23,6 @@ while not exited:
             exited = True
         print(event)
 
+    dashboard.Update()
     pygame.display.update()
     clock.tick(60)
