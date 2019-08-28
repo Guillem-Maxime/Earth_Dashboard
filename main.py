@@ -1,12 +1,19 @@
 import pygame
 
+import dashboard
+
 pygame.init()
 
-gameDisplay = pygame.display.set_mode((800,600))
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+gameDisplay = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 #gameDisplay = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 pygame.display.set_caption('A bit Racey')
 
 clock = pygame.time.Clock()
+
+dashboard(SCREEN_WIDTH, SCREEN_HEIGHT)
 
 exited = False
 
