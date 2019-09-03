@@ -17,11 +17,11 @@ class Dashboard:
 # Display / Update Methods Methods
 ##################################
     def Update(self):
+        self.m_TimePart.Update()
         self.Display()
     
     def Display(self):
         self.m_EarthPart.Display()
-        self.m_TimePart.Display()
         self.m_WeatherPart.Display()
 
 ##################################
