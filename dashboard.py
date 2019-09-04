@@ -18,7 +18,7 @@ class Dashboard:
 ##################################
     def Update(self):
         self.m_TimePart.Update()
-        #self.Display()
+        self.Display()
     
     def Display(self):
         self.m_EarthPart.Display()

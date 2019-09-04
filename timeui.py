@@ -29,7 +29,7 @@ class TimeUI(UISurfaceBase):
     def DisplayDate(self):
         dateText = self.GetDateString()
         font = 'freesansbold.ttf'
-        size = 80
+        size = 60
         color = (0,0,0)
         offset = (0,45)
         textObject = TextObject(dateText, font, size, color, self.m_Rect, offset)

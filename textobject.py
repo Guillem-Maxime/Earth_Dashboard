@@ -21,5 +21,4 @@ class TextObject:
         self.m_TextRect = newRect
 
     def Display(self, gameDisplay):
-        pygame.draw.rect(gameDisplay, (125, 125, 125), self.m_TextRect)
         gameDisplay.blit(self.m_TextSurf, self.m_TextRect)
