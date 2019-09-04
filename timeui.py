@@ -20,12 +20,22 @@ class TimeUI(UISurfaceBase):
     def DisplayTime(self):
         timeText = self.GetTimeString()
         font = 'freesansbold.ttf'
-        size = 115
+        size = 80
         color = (0,0,0)
-        textObject = TextObject(timeText, font, size, color, self.m_Width, self.m_Height)
+        offset = (0,-45)
+        textObject = TextObject(timeText, font, size, color, self.m_Rect, offset)
         textObject.Display(self.m_Surface)
 
+    def DisplayDate(self):
+        dateText = self.GetDateString()
+        font = 'freesansbold.ttf'
+        size = 80
+        color = (0,0,0)
+        offset = (0,45)
+        textObject = TextObject(dateText, font, size, color, self.m_Rect, offset)
+        textObject.Display(self.m_Surface)
 
     def Update(self):
         super().Display()
         self.DisplayTime()
+        self.DisplayDate()

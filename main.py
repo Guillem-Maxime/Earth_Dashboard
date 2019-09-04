@@ -23,6 +23,7 @@ while not exited:
             exited = True
         print(event)
 
+    gameDisplay.fill((255,255,255))
     dashboard.Update()
     pygame.display.update()
     clock.tick(60)
