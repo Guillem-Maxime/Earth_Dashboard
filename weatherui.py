@@ -19,7 +19,7 @@ class WeatherUI(UISurfaceBase):
     def InitOWM(self):
         self.m_Owm = OWM(API_KEY)
         self.m_Owm = OWM(language='fr')
-        self.m_ObsList = self.m_Owm.weather_at_place(PLACE_01)
+        #self.m_ObsList = self.m_Owm.three_hours_forecast(PLACE_01)
 
     def GetColor(self):
         return (0,255,0)
